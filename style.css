@@ -2,8 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
-
+body {
+  background: linear-gradient(0deg, #E6C229, white);
+}
 i, svg {
   pointer-events: none;
 }
@@ -21,11 +24,12 @@ header {
   min-height: 100vh;
   align-items: center;
   /* justify-content: space-evenly; */
-  background: linear-gradient(0deg, #E6C229, white);
+  /* background: linear-gradient(0deg, #E6C229, white); */
 }
 
 .kick-track, .snare-track, .hihat-track {
-  width: 80%;
+  width: 90%;
+  margin: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,8 +60,14 @@ header {
 color: red;
 }
 
-.pads {
+.name-select {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pads {
+  display: flex;flex-wrap: wrap;
 }
 .pad {
   width: 2.5rem;
