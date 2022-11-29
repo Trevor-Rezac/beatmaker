@@ -46,7 +46,7 @@ header {
   cursor: pointer;
   font-size: 1rem;
   background: lightgrey;
-  transition: all .3s ease;
+  transition: all .5s ease;
 }
 .controls button:hover {
   background: gray;
@@ -56,8 +56,8 @@ header {
   display: flex;
 }
 .pad {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   margin: 1rem .5rem;
   cursor: pointer;
   border-radius: 50%;
@@ -96,9 +96,15 @@ header {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  background: lightgrey;
+  background: #5FAD56;
+  opacity: .5;
   transition: all .3s ease;
 }
 .play-btn:hover {
-  background: gray;
+  opacity: 1;
+}
+
+.play {
+  background: #B4436C;
+  opacity: 1;
 }
