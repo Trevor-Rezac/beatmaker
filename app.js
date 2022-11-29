@@ -2,11 +2,11 @@ class DrumKit {
   constructor() {
     this.pads = document.querySelectorAll(".pad");
     this.kickAudio = document.querySelector(".kick-audio");
-    this.kickOption = "./sounds/kick-808.wav";
+    this.kickOption = "./sounds/kick-acoustic01.wav";
     this.snareAudio = document.querySelector(".snare-audio");
-    this.snareOption = "./sounds/snare-808.wav";
+    this.snareOption = "./sounds/snare-acoustic01.wav";
     this.hihatAudio = document.querySelector(".hihat-audio");
-    this.hihatOption = "./sounds/hihat-808.wav";
+    this.hihatOption = "./sounds/hihat-acoustic01.wav";
     this.selectOptions = document.querySelectorAll("select");
     this.index = 0;
     this.bpm = 120;
@@ -29,7 +29,7 @@ class DrumKit {
   }
 
   repeat() {
-    let step = this.index % 10;
+    let step = this.index % 12;
     const activeBars = document.querySelectorAll(`.beat${step}`);
     activeBars.forEach((bar) => {
       bar.style.animation = `playTrack .3s alternate ease-in-out 2`;
