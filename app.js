@@ -15,6 +15,7 @@ class DrumKit {
     this.header = document.querySelector(".custom-header");
     this.isPlaying = null;
     this.muteBtns = document.querySelectorAll(".mute");
+    this.tempoSlider = document.querySelector(".tempo-slider");
   }
 
   createHeader() {
@@ -53,6 +54,7 @@ class DrumKit {
     });
     this.index++;
   }
+
   start() {
     const interval = (60 / this.bpm) * 1000;
     //check if loop is currently playing
@@ -66,6 +68,7 @@ class DrumKit {
       }, interval);
     }
   }
+
   activePad() {
     this.classList.toggle("active");
   }
@@ -124,6 +127,27 @@ class DrumKit {
       }
     }
   }
+
+  changeTempoNum(e) {
+    const tempoNum = document.querySelector(".tempo-num");
+    tempoNum.innerText = e.target.value;
+  }
+
+  updateTempo(e) {
+    //sets the bpm to the slider value
+    this.bpm = e.target.value;
+
+    //clears the isPlaying interval and resets it
+    clearInterval(this.isPlaying);
+    this.isPlaying = null;
+
+    //checks if the playBtn contains play class
+    const playBtn = document.querySelector(".play-btn");
+    if (playBtn.classList.contains("play")) {
+      //if it does, start the drumkit
+      this.start();
+    }
+  }
 }
 
 const drumKit = new DrumKit();
@@ -152,4 +176,14 @@ drumKit.muteBtns.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     drumKit.mute(e);
   });
+});
+
+drumKit.tempoSlider.addEventListener("input", function (e) {
+  drumKit.changeTempoNum(e);
+});
+
+drumKit.tempoSlider.addEventListener("change", function (e) {
+  //on change is required so the start() function is only invoked once
+  //rather than each time the input updates
+  drumKit.updateTempo(e);
 });
