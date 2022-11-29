@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>BeatZ MakeR</title>
+</head>
+<body>
+  <header>
+    <h1 class='custom-header'></h1>
+  </header>
+  <section class="sequencer">
+    <div class="kick-track">
+      <div class="controls">
+        <h2>Kick</h2>
+        <select name="kick-select" id="kick-select">
+          <option value="./sounds/kick-808.wav">808</option>
+          <option value="./sounds/kick-classic.wav">Classic</option>
+          <option value="./sounds/kick-oldschool.wav">Old-school</option>
+        </select>
+        <button data-track='0' class='mute kick-volume'>
+          <i class="fa-solid fa-volume-off"></i>
+        </button>
+      </div>
+      <div class="kick pads">
+        <div class="pad kick-pad beat0"></div>
+        <div class="pad kick-pad beat1"></div>
+        <div class="pad kick-pad beat2"></div>
+        <div class="pad kick-pad beat3"></div>
+        <div class="pad kick-pad beat4"></div>
+        <div class="pad kick-pad beat5"></div>
+        <div class="pad kick-pad beat6"></div>
+        <div class="pad kick-pad beat7"></div>
+        <div class="pad kick-pad beat8"></div>
+        <div class="pad kick-pad beat9"></div>
+      </div>
+    </div>
+    <div class="snare-track">
+      <div class="controls">
+        <h2>Snare</h2>
+        <select name="snare-select" id="snare-select">
+          <option value="./sounds/snare-808.wav">808</option>
+          <option value="./sounds/snare-big.wav">Big</option>
+          <option value="./sounds/snare-punch.wav">Punch</option>
+        </select>
+        <button data-track='1' class='mute snare-volume'>
+          <i class="fa-solid fa-volume-off"></i>
+        </button>
+      </div>
+      <div class="snare pads">
+        <div class="pad snare-pad beat0"></div>
+        <div class="pad snare-pad beat1"></div>
+        <div class="pad snare-pad beat2"></div>
+        <div class="pad snare-pad beat3"></div>
+        <div class="pad snare-pad beat4"></div>
+        <div class="pad snare-pad beat5"></div>
+        <div class="pad snare-pad beat6"></div>
+        <div class="pad snare-pad beat7"></div>
+        <div class="pad snare-pad beat8"></div>
+        <div class="pad snare-pad beat9"></div>
+      </div>
+    </div>
+    <div class="hihat-track">
+      <div class="controls">
+        <h2>Hi-hat</h2>
+        <select name="hihat-select" id="hihat-select">
+          <option value="./sounds/hihat-808.wav">808</option>
+          <option value="./sounds/hihat-ring.wav">Ring</option>
+          <option value="./sounds/hihat-electro.wav">Electro</option>
+        </select>
+        <button data-track='2' class='mute hihat-volume'>
+          <i class="fa-solid fa-volume-off"></i>
+        </button>
+      </div>
+      <div class="hihat pads">
+        <div class="pad hihat-pad beat0"></div>
+        <div class="pad hihat-pad beat1"></div>
+        <div class="pad hihat-pad beat2"></div>
+        <div class="pad hihat-pad beat3"></div>
+        <div class="pad hihat-pad beat4"></div>
+        <div class="pad hihat-pad beat5"></div>
+        <div class="pad hihat-pad beat6"></div>
+        <div class="pad hihat-pad beat7"></div>
+        <div class="pad hihat-pad beat8"></div>
+        <div class="pad hihat-pad beat9"></div>
+      </div>
+    </div>
+    <div class="tempo">
+      <input type='range' class='tempo-slider' max='300' min='20' value='120'>
+      <p>Tempo: <span class='tempo-num'>120</span></p>
+    </div>
+    <button class="play-btn">
+      <i class="fa-solid fa-play" id='play-pause'></i>
+    </button>
+  </section>
+  <audio class='kick-audio' src="./sounds/kick-808.wav"></audio>
+  <audio class='snare-audio' src="./sounds/snare-808.wav"></audio>
+  <audio class='hihat-audio' src="./sounds/hihat-808.wav"></audio>
+
+
+
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" 
+    integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src='./app.js'></script>
+</body>
+</html>
