@@ -96,8 +96,8 @@ class DrumKit {
 
   mute(e) {
     const dataTrack = e.target.getAttribute("data-track");
+
     e.target.classList.toggle("muted");
-    console.log(e.target.classList);
     if (e.target.classList.contains("muted")) {
       switch (dataTrack) {
         case "0":
