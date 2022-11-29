@@ -8,21 +8,23 @@
   <title>BeatZ MakeR</title>
 </head>
 <body>
-  <header>BeatZ MakeR</header>
+  <header>
+    <h1>BeatZ MakeR</h1>
+  </header>
   <section class="sequencer">
     <div class="kick-track">
       <div class="controls">
-        <h1>Kick</h1>
-        <button data-track='0' class='mute kick-volume'>
-          <i class="fa-solid fa-volume-xmark"></i>
-        </button>
+        <h2>Kick</h2>
         <select name="kick-select" id="kick-select">
           <option value="./sounds/kick-808.wav">808</option>
           <option value="./sounds/kick-classic.wav">Classic</option>
           <option value="./sounds/kick-oldschool.wav">Old-school</option>
         </select>
+        <button data-track='0' class='mute kick-volume'>
+          <i class="fa-solid fa-volume-off"></i>
+        </button>
       </div>
-      <div class="kick">
+      <div class="kick pads">
         <div class="pad kick-pad beat0"></div>
         <div class="pad kick-pad beat1"></div>
         <div class="pad kick-pad beat2"></div>
@@ -35,17 +37,17 @@
     </div>
     <div class="snare-track">
       <div class="controls">
-        <h1>Snare</h1>
-        <button data-track='1' class='mute snare-volume'>
-          <i class="fa-solid fa-volume-xmark"></i>
-        </button>
+        <h2>Snare</h2>
         <select name="snare-select" id="snare-select">
           <option value="./sounds/snare-808.wav">808</option>
           <option value="./sounds/snare-big.wav">Big</option>
           <option value="./sounds/snare-punch.wav">Punch</option>
         </select>
+        <button data-track='1' class='mute snare-volume'>
+          <i class="fa-solid fa-volume-off"></i>
+        </button>
       </div>
-      <div class="snare">
+      <div class="snare pads">
         <div class="pad snare-pad beat0"></div>
         <div class="pad snare-pad beat1"></div>
         <div class="pad snare-pad beat2"></div>
@@ -58,17 +60,17 @@
     </div>
     <div class="hihat-track">
       <div class="controls">
-        <h1>Hi-hat</h1>
-        <button data-track='2' class='mute hihat-volume'>
-          <i class="fa-solid fa-volume-xmark"></i>
-        </button>
+        <h2>Hi-hat</h2>
         <select name="hihat-select" id="hihat-select">
           <option value="./sounds/hihat-808.wav">808</option>
           <option value="./sounds/hihat-ring.wav">Ring</option>
           <option value="./sounds/hihat-electro.wav">Electro</option>
         </select>
+        <button data-track='2' class='mute hihat-volume'>
+          <i class="fa-solid fa-volume-off"></i>
+        </button>
       </div>
-      <div class="hihat">
+      <div class="hihat pads">
         <div class="pad hihat-pad beat0"></div>
         <div class="pad hihat-pad beat1"></div>
         <div class="pad hihat-pad beat2"></div>
@@ -79,13 +81,13 @@
         <div class="pad hihat-pad beat7"></div>
       </div>
     </div>
+    <button class="play-btn">
+      <i class="fa-solid fa-play"></i>
+    </button>
   </section>
-  <button class="play">
-    <i class="fa-solid fa-play"></i>
-  </button>
-  <audio class='kick-sound' src="./sounds/kick-808.wav"></audio>
-  <audio class='snare-sound' src="./sounds/snare-808.wav"></audio>
-  <audio class='hihat-sound' src="./sounds/hihat-808.wav"></audio>
+  <audio class='kick-audio' src="./sounds/kick-808.wav"></audio>
+  <audio class='snare-audio' src="./sounds/snare-808.wav"></audio>
+  <audio class='hihat-audio' src="./sounds/hihat-808.wav"></audio>
 
   <script 
     src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" 
