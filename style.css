@@ -108,3 +108,12 @@ header {
   background: #B4436C;
   opacity: 1;
 }
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}

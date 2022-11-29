@@ -9,6 +9,7 @@ class DrumKit {
     this.playBtn = document.querySelector(".play-btn");
     this.playPauseIcon = document.querySelector("#play-pause");
     this.header = document.querySelector(".custom-header");
+    this.isPlaying = null;
   }
 
   createHeader() {
@@ -22,16 +23,42 @@ class DrumKit {
   }
 
   repeat() {
-    let step = this.index % 8;
-    const activeBar = document.querySelectorAll(`.beat${step}`);
-    console.log(step);
+    let step = this.index % 10;
+    const activeBars = document.querySelectorAll(`.beat${step}`);
+    activeBars.forEach((bar) => {
+      bar.style.animation = `playTrack .3s alternate ease-in-out 2`;
+
+      //check if pads are active
+      if (bar.classList.contains("active")) {
+        //check each sound
+        if (bar.classList.contains("kick-pad")) {
+          this.kickAudio.currentTime = 0;
+          this.kickAudio.play();
+        }
+        if (bar.classList.contains("snare-pad")) {
+          this.snareAudio.currentTime = 0;
+          this.snareAudio.play();
+        }
+        if (bar.classList.contains("hihat-pad")) {
+          this.hihatAudio.currentTime = 0;
+          this.hihatAudio.play();
+        }
+      }
+    });
     this.index++;
   }
   start() {
     const interval = (60 / this.bpm) * 1000;
-    setInterval(() => {
-      this.repeat();
-    }, interval);
+    //check if loop is currently playing
+    if (this.isPlaying) {
+      //clear the interval
+      clearInterval(this.isPlaying);
+      this.isPlaying = null;
+    } else {
+      this.isPlaying = setInterval(() => {
+        this.repeat();
+      }, interval);
+    }
   }
   activePad() {
     this.classList.toggle("active");
@@ -52,4 +79,7 @@ drumKit.playBtn.addEventListener("click", function () {
 
 drumKit.pads.forEach((pad) => {
   pad.addEventListener("click", drumKit.activePad);
+  pad.addEventListener("animationend", function () {
+    this.style.animation = "";
+  });
 });
