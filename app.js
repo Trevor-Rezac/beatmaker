@@ -8,6 +8,17 @@ class DrumKit {
     this.bpm = 120;
     this.playBtn = document.querySelector(".play-btn");
     this.playPauseIcon = document.querySelector("#play-pause");
+    this.header = document.querySelector(".custom-header");
+  }
+
+  createHeader() {
+    if (localStorage.name) {
+      this.header.innerHTML = `BeatZ by ${localStorage.name}`;
+    } else {
+      let name = prompt("What is your name?");
+      localStorage.setItem("name", name);
+      this.header.innerHTML = `BeatZ by ${name}`;
+    }
   }
 
   repeat() {
@@ -28,6 +39,8 @@ class DrumKit {
 }
 
 const drumKit = new DrumKit();
+
+drumKit.createHeader();
 
 drumKit.playBtn.addEventListener("click", function () {
   drumKit.start();
