@@ -14,35 +14,37 @@
   <section class="sequencer">
     <div class="kick-track">
       <div class="controls">
-        <h2>Kick</h2>
-        <select name="kick-select" id="kick-select">
-          <option value="./sounds/kick-acoustic01.wav">Acoustic 1</option>
-          <option value="./sounds/kick-acoustic02.wav">Acoustic 2</option>
-          <option value="./sounds/kick-big.wav">Big</option>
-          <option value="./sounds/kick-classic.wav">Classic</option>
-          <option value="./sounds/kick-cultivator.wav">Cultivator</option>
-          <option value="./sounds/kick-deep.wav">Deep</option>
-          <option value="./sounds/kick-dry.wav">Dry</option>
-          <option value="./sounds/kick-electro01.wav">Electro 1</option>
-          <option value="./sounds/kick-electro02.wav">Electro 2</option>
-          <option value="./sounds/kick-floppy.wav">Floppy</option>
-          <option value="./sounds/kick-gritty.wav">Gritty</option>
-          <option value="./sounds/kick-heavy.wav">Heavy</option>
-          <option value="./sounds/kick-newwave.wav">New Wave</option>
-          <option value="./sounds/kick-oldschool.wav">Old-school</option>
-          <option value="./sounds/kick-plain.wav">Plain</option>
-          <option value="./sounds/kick-slapback.wav">Slap Back</option>
-          <option value="./sounds/kick-softy.wav">Softy</option>
-          <option value="./sounds/kick-stomp.wav">Stomp</option>
-          <option value="./sounds/kick-tape.wav">Tape</option>
-          <option value="./sounds/kick-thump.wav">Thump</option>
-          <option value="./sounds/kick-tight.wav">Tight</option>
-          <option value="./sounds/kick-tron.wav">Tron</option>
-          <option value="./sounds/kick-vinyl01.wav">Vinyl 1</option>
-          <option value="./sounds/kick-vinyl02.wav">Vinyl 2</option>
-          <option value="./sounds/kick-zapper.wav">Zapper</option>
-          <option value="./sounds/kick-808.wav">808</option>
-        </select>
+        <div class='name-select'>
+          <h2>Kick</h2>
+          <select name="kick-select" id="kick-select">
+            <option value="./sounds/kick-acoustic01.wav">Acoustic 1</option>
+            <option value="./sounds/kick-acoustic02.wav">Acoustic 2</option>
+            <option value="./sounds/kick-big.wav">Big</option>
+            <option value="./sounds/kick-classic.wav">Classic</option>
+            <option value="./sounds/kick-cultivator.wav">Cultivator</option>
+            <option value="./sounds/kick-deep.wav">Deep</option>
+            <option value="./sounds/kick-dry.wav">Dry</option>
+            <option value="./sounds/kick-electro01.wav">Electro 1</option>
+            <option value="./sounds/kick-electro02.wav">Electro 2</option>
+            <option value="./sounds/kick-floppy.wav">Floppy</option>
+            <option value="./sounds/kick-gritty.wav">Gritty</option>
+            <option value="./sounds/kick-heavy.wav">Heavy</option>
+            <option value="./sounds/kick-newwave.wav">New Wave</option>
+            <option value="./sounds/kick-oldschool.wav">Old-school</option>
+            <option value="./sounds/kick-plain.wav">Plain</option>
+            <option value="./sounds/kick-slapback.wav">Slap Back</option>
+            <option value="./sounds/kick-softy.wav">Softy</option>
+            <option value="./sounds/kick-stomp.wav">Stomp</option>
+            <option value="./sounds/kick-tape.wav">Tape</option>
+            <option value="./sounds/kick-thump.wav">Thump</option>
+            <option value="./sounds/kick-tight.wav">Tight</option>
+            <option value="./sounds/kick-tron.wav">Tron</option>
+            <option value="./sounds/kick-vinyl01.wav">Vinyl 1</option>
+            <option value="./sounds/kick-vinyl02.wav">Vinyl 2</option>
+            <option value="./sounds/kick-zapper.wav">Zapper</option>
+            <option value="./sounds/kick-808.wav">808</option>
+          </select>
+        </div>
         <button data-track='0' class='mute kick-volume'>
           <i class="fa-solid fa-volume-off"></i>
         </button>
@@ -60,10 +62,15 @@
         <div class="pad kick-pad beat9"></div>
         <div class="pad kick-pad beat10"></div>
         <div class="pad kick-pad beat11"></div>
+        <div class="pad kick-pad beat12"></div>
+        <div class="pad kick-pad beat13"></div>
+        <div class="pad kick-pad beat14"></div>
+        <div class="pad kick-pad beat15"></div>
       </div>
     </div>
     <div class="snare-track">
       <div class="controls">
+        <div class='name-select'>
         <h2>Snare</h2>
         <select name="snare-select" id="snare-select">
           <option value="./sounds/snare-acoustic01.wav">Acoustic 1</option>
@@ -89,6 +96,7 @@
           <option value="./sounds/snare-vinyl02.wav">Vinyl 2</option>
           <option value="./sounds/snare-808.wav">808</option>
         </select>
+      </div>
         <button data-track='1' class='mute snare-volume'>
           <i class="fa-solid fa-volume-off"></i>
         </button>
@@ -106,10 +114,15 @@
         <div class="pad snare-pad beat9"></div>
         <div class="pad snare-pad beat10"></div>
         <div class="pad snare-pad beat11"></div>
+        <div class="pad snare-pad beat12"></div>
+        <div class="pad snare-pad beat13"></div>
+        <div class="pad snare-pad beat14"></div>
+        <div class="pad snare-pad beat15"></div>
       </div>
     </div>
     <div class="hihat-track">
       <div class="controls">
+        <div class='name-select'>
         <h2>Hi-hat</h2>
         <select name="hihat-select" id="hihat-select">
           <option value="./sounds/hihat-acoustic01.wav">Acoustic 1</option>
@@ -123,8 +136,8 @@
           <option value="./sounds/hihat-reso.wav">Reso</option>
           <option value="./sounds/hihat-ring.wav">Ring</option>
           <option value="./sounds/hihat-808.wav">808</option>
-
         </select>
+      </div>
         <button data-track='2' class='mute hihat-volume'>
           <i class="fa-solid fa-volume-off"></i>
         </button>
@@ -142,6 +155,10 @@
         <div class="pad hihat-pad beat9"></div>
         <div class="pad hihat-pad beat10"></div>
         <div class="pad hihat-pad beat11"></div>
+        <div class="pad hihat-pad beat12"></div>
+        <div class="pad hihat-pad beat13"></div>
+        <div class="pad hihat-pad beat14"></div>
+        <div class="pad hihat-pad beat15"></div>
       </div>
     </div>
     <div class="tempo">

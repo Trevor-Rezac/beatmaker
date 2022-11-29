@@ -29,7 +29,7 @@ class DrumKit {
   }
 
   repeat() {
-    let step = this.index % 12;
+    let step = this.index % 16;
     const activeBars = document.querySelectorAll(`.beat${step}`);
     activeBars.forEach((bar) => {
       bar.style.animation = `playTrack .3s alternate ease-in-out 2`;
