@@ -14,6 +14,7 @@ class DrumKit {
     this.playPauseIcon = document.querySelector("#play-pause");
     this.header = document.querySelector(".custom-header");
     this.isPlaying = null;
+    this.muteBtns = document.querySelectorAll(".mute");
   }
 
   createHeader() {
@@ -92,6 +93,37 @@ class DrumKit {
         break;
     }
   }
+
+  mute(e) {
+    const dataTrack = e.target.getAttribute("data-track");
+    e.target.classList.toggle("muted");
+    console.log(e.target.classList);
+    if (e.target.classList.contains("muted")) {
+      switch (dataTrack) {
+        case "0":
+          this.kickAudio.volume = 0;
+          break;
+        case "1":
+          this.snareAudio.volume = 0;
+          break;
+        case "2":
+          this.hihatAudio.volume = 0;
+          break;
+      }
+    } else {
+      switch (dataTrack) {
+        case "0":
+          this.kickAudio.volume = 1;
+          break;
+        case "1":
+          this.snareAudio.volume = 1;
+          break;
+        case "2":
+          this.hihatAudio.volume = 1;
+          break;
+      }
+    }
+  }
 }
 
 const drumKit = new DrumKit();
@@ -113,5 +145,11 @@ drumKit.pads.forEach((pad) => {
 drumKit.selectOptions.forEach((option) => {
   option.addEventListener("change", function (e) {
     drumKit.changeSound(e);
+  });
+});
+
+drumKit.muteBtns.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    drumKit.mute(e);
   });
 });

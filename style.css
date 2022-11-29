@@ -52,6 +52,10 @@ header {
   background: gray;
 }
 
+.controls button.muted {
+color: red;
+}
+
 .pads {
   display: flex;
 }
