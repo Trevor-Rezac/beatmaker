@@ -7,6 +7,10 @@ class DrumKit {
     this.snareOption = "./sounds/snare-acoustic01.wav";
     this.hihatAudio = document.querySelector(".hihat-audio");
     this.hihatOption = "./sounds/hihat-acoustic01.wav";
+    this.openhatAudio = document.querySelector(".openhat-audio");
+    this.openhatOption = "./sounds/openhat-acoustic01.wav";
+    this.tomAudio = document.querySelector(".tom-audio");
+    this.tomOption = "./sounds/tom-acoustic01.wav";
     this.selectOptions = document.querySelectorAll("select");
     this.index = 0;
     this.bpm = 120;
@@ -49,6 +53,14 @@ class DrumKit {
         if (bar.classList.contains("hihat-pad")) {
           this.hihatAudio.currentTime = 0;
           this.hihatAudio.play();
+        }
+        if (bar.classList.contains("openhat-pad")) {
+          this.openhatAudio.currentTime = 0;
+          this.openhatAudio.play();
+        }
+        if (bar.classList.contains("tom-pad")) {
+          this.tomAudio.currentTime = 0;
+          this.tomAudio.play();
         }
       }
     });
@@ -94,6 +106,12 @@ class DrumKit {
       case "hihat-select":
         this.hihatAudio.src = optionValue;
         break;
+      case "openhat-select":
+        this.openhatAudio.src = optionValue;
+        break;
+      case "tom-select":
+        this.tomAudio.src = optionValue;
+        break;
     }
   }
 
@@ -112,6 +130,12 @@ class DrumKit {
         case "2":
           this.hihatAudio.volume = 0;
           break;
+        case "3":
+          this.openhatAudio.volume = 0;
+          break;
+        case "4":
+          this.tomAudio.volume = 0;
+          break;
       }
     } else {
       switch (dataTrack) {
@@ -123,6 +147,12 @@ class DrumKit {
           break;
         case "2":
           this.hihatAudio.volume = 1;
+          break;
+        case "3":
+          this.openhatAudio.volume = 1;
+          break;
+        case "4":
+          this.tomAudio.volume = 1;
           break;
       }
     }
