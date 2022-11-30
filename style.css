@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 body {
-  background: linear-gradient(0deg, #E6C229, white);
+  /* background: rgb(216,25,255); */
+background: radial-gradient(circle, rgba(216,25,255,1) 4%, rgba(176,22,236,1) 15%, rgba(156,18,210,1) 29%, rgba(141,16,189,1) 44%, rgba(126,15,170,1) 57%, rgba(112,13,148,1) 70%, rgba(93,0,126,1) 79%, rgba(87,7,116,1) 82%, rgba(81,13,106,1) 83%);
 }
+
 i, svg {
   pointer-events: none;
 }
@@ -16,6 +17,8 @@ header {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  font-family: 'Permanent Marker', cursive;
+  color: #25BDF3;
 }
 
 .sequencer {
@@ -64,6 +67,8 @@ color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Permanent Marker', cursive;
+  color: #25BDF3;
 }
 
 .pads {
@@ -79,7 +84,7 @@ color: red;
 }
 
 .kick-pad {
-  background: #6E0667;
+  background: #FFF444;
   opacity: .5;
 }
 
@@ -89,7 +94,7 @@ color: red;
 }
 
 .hihat-pad {
-  background: #FE2D5E;
+  background: #F308FC;
   opacity: .5;
 }
 
@@ -115,7 +120,7 @@ color: red;
   cursor: pointer;
   position: relative;
   border-radius: 5px;
-  background: #375283;
+  background: #23E7FD;;
   opacity: .8;
 }
 .tempo-slider::-webkit-slider-thumb {
@@ -133,6 +138,8 @@ color: red;
   font-size: 1.5rem;
   margin: 1rem;
   text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  color: #25BDF3;
 }
 
 .play-btn {
@@ -142,7 +149,7 @@ color: red;
   cursor: pointer;
   font-size: 1rem;
   background: #5FAD56;
-  opacity: .5;
+  opacity: .75;
   transition: all .3s ease;
 }
 .play-btn:hover {
@@ -150,7 +157,7 @@ color: red;
 }
 
 .play {
-  background: #B4436C;
+  background: red;
   opacity: 1;
 }
 
