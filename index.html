@@ -176,7 +176,7 @@
           <option value="./sounds/openhat-808.wav">808</option>
         </select>
       </div>
-        <button data-track='2' class='mute openhat-volume'>
+        <button data-track='3' class='mute openhat-volume'>
           <i class="fa-solid fa-volume-off"></i>
         </button>
       </div>
@@ -199,6 +199,45 @@
         <div class="pad openhat-pad beat15"></div>
       </div>
     </div>
+    <div class="tom-track">
+      <div class="controls">
+        <div class='name-select'>
+        <h2>Tom</h2>
+        <select name="tom-select" id="tom-select">
+          <option value="./sounds/tom-acoustic01.wav">Acoustic 1</option>
+          <option value="./sounds/tom-acoustic02.wav">Acoustic 2</option>
+          <option value="./sounds/tom-analog.wav">Analog</option>
+          <option value="./sounds/tom-chiptune.wav">Chiptune</option>
+          <option value="./sounds/tom-fm.wav">Fm</option>
+          <option value="./sounds/tom-lofi.wav">LoFi</option>
+          <option value="./sounds/tom-rototom.wav">RotoTom</option>
+          <option value="./sounds/tom-short.wav">Short</option>
+          <option value="./sounds/tom-808.wav">808</option>
+        </select>
+      </div>
+        <button data-track='4' class='mute tom-volume'>
+          <i class="fa-solid fa-volume-off"></i>
+        </button>
+      </div>
+      <div class="tom pads">
+        <div class="pad tom-pad beat0"></div>
+        <div class="pad tom-pad beat1"></div>
+        <div class="pad tom-pad beat2"></div>
+        <div class="pad tom-pad beat3"></div>
+        <div class="pad tom-pad beat4"></div>
+        <div class="pad tom-pad beat5"></div>
+        <div class="pad tom-pad beat6"></div>
+        <div class="pad tom-pad beat7"></div>
+        <div class="pad tom-pad beat8"></div>
+        <div class="pad tom-pad beat9"></div>
+        <div class="pad tom-pad beat10"></div>
+        <div class="pad tom-pad beat11"></div>
+        <div class="pad tom-pad beat12"></div>
+        <div class="pad tom-pad beat13"></div>
+        <div class="pad tom-pad beat14"></div>
+        <div class="pad tom-pad beat15"></div>
+      </div>
+    </div>
     <div class="tempo">
       <input type='range' class='tempo-slider' max='300' min='20' value='120'>
       <p>Tempo: <span class='tempo-num'>120</span></p>
@@ -211,7 +250,7 @@
   <audio class='snare-audio' src="./sounds/snare-acoustic01.wav"></audio>
   <audio class='hihat-audio' src="./sounds/hihat-acoustic01.wav"></audio>
   <audio class='openhat-audio' src="./sounds/openhat-acoustic01.wav"></audio>
-
+  <audio class='tom-audio' src="./sounds/tom-acoustic01.wav"></audio>
 
 
   <script 
