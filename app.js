@@ -7,6 +7,8 @@ class DrumKit {
     this.snareOption = "./sounds/snare-acoustic01.wav";
     this.hihatAudio = document.querySelector(".hihat-audio");
     this.hihatOption = "./sounds/hihat-acoustic01.wav";
+    this.openhatAudio = document.querySelector(".openhat-audio");
+    this.openhatOption = "./sounds/openhat-acoustic01.wav";
     this.selectOptions = document.querySelectorAll("select");
     this.index = 0;
     this.bpm = 120;
@@ -49,6 +51,10 @@ class DrumKit {
         if (bar.classList.contains("hihat-pad")) {
           this.hihatAudio.currentTime = 0;
           this.hihatAudio.play();
+        }
+        if (bar.classList.contains("openhat-pad")) {
+          this.openhatAudio.currentTime = 0;
+          this.openhatAudio.play();
         }
       }
     });
@@ -93,6 +99,9 @@ class DrumKit {
         break;
       case "hihat-select":
         this.hihatAudio.src = optionValue;
+        break;
+      case "openhat-select":
+        this.openhatAudio.src = optionValue;
         break;
     }
   }
