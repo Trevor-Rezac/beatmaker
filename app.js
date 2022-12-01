@@ -20,6 +20,8 @@ class DrumKit {
     this.isPlaying = null;
     this.muteBtns = document.querySelectorAll(".mute");
     this.tempoSlider = document.querySelector(".tempo-slider");
+    this.openModalBtn = document.querySelector(".open-modal");
+    this.closeModalBtn = document.querySelector(".close-modal");
   }
 
   createHeader() {
@@ -29,6 +31,22 @@ class DrumKit {
       let name = prompt("What is your name?");
       localStorage.setItem("name", name);
       this.header.innerHTML = `BeatZ by ${name}`;
+
+      //show instruction modal
+      const modalWindow = document.querySelector(".modal-overlay");
+      modalWindow.style.display = "flex";
+    }
+  }
+
+  handleModal(e) {
+    const modalWindow = document.querySelector(".modal-overlay");
+
+    if (e.target.classList.contains("open-modal")) {
+      modalWindow.style.display = "flex";
+    }
+
+    if (e.target.classList.contains("close-modal")) {
+      modalWindow.style.display = "none";
     }
   }
 
@@ -183,6 +201,13 @@ class DrumKit {
 const drumKit = new DrumKit();
 
 drumKit.createHeader();
+
+drumKit.openModalBtn.addEventListener("click", function (e) {
+  drumKit.handleModal(e);
+});
+drumKit.closeModalBtn.addEventListener("click", function (e) {
+  drumKit.handleModal(e);
+});
 
 drumKit.playBtn.addEventListener("click", function () {
   drumKit.start();

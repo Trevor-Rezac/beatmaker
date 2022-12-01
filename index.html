@@ -11,8 +11,31 @@
   <title>BeatZ MakeR</title>
 </head>
 <body>
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>How does this work!?</h3>
+      </div>
+      <div class="modal-content">
+        <ul>
+          <li>Choose a sound from the drop down menu for each instrument</li>
+          <li>Click on any circle to activate that pad</li>
+          <li>Choose as any many pads in each track as you want</li>
+          <li>Press play; then each activated pad will play its sound in order</li>
+          <li>Use the mute buttons to mute an entire track</li>
+          <li>Use the tempo slider to adjust the speed</li>
+
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <h4 class='close-modal'>Ready for my solo!
+        </h4>
+      </div>
+    </div>
+  </div>
   <header>
     <h1 class='custom-header'></h1>
+    <p class="open-modal">How does this work!?</p>
   </header>
   <section class="sequencer">
     <div class="kick-track">
@@ -167,7 +190,7 @@
     <div class="openhat-track">
       <div class="controls">
         <div class='name-select'>
-        <h2>Open-Hat</h2>
+        <h2>Open-HH</h2>
         <select name="openhat-select" id="openhat-select">
           <option value="./sounds/openhat-acoustic01.wav">Acoustic 1</option>
           <option value="./sounds/openhat-analog.wav">Analog</option>
@@ -246,6 +269,10 @@
       <i class="fa-solid fa-play" id='play-pause'></i>
     </button>
   </section>
+
+
+
+
   <audio class='kick-audio' src="./sounds/kick-acoustic01.wav"></audio>
   <audio class='snare-audio' src="./sounds/snare-acoustic01.wav"></audio>
   <audio class='hihat-audio' src="./sounds/hihat-acoustic01.wav"></audio>

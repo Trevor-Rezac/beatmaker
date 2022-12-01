@@ -12,14 +12,65 @@ i, svg {
   pointer-events: none;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128,128,128,0.5);
+  display: none;
+  z-index: 9998;
+}
+
+.modal {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+  height: 15rem;
+  width: 35rem;
+  background: rgb(254,45,94);
+  background: linear-gradient(0deg, rgba(254,45,94, 1) 24%, rgba(254,93,22, 1) 63%, rgba(255,209,81, 1) 100%);
+  border-radius: 5px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.modal-header h3, 
+.modal-footer h4{
+  font-size: larger;
+  color: #762886;
+  -webkit-text-stroke: 1px #290241;
+}
+
+.modal-footer h4:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  /* transform: rotateZ('10deg'); */
+}
+
+
 header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem;
   font-family: 'Permanent Marker', cursive;
   color: #25BDF3;
   -webkit-text-stroke: 1px black;
+  transition: all .3s ease;
+}
+header p {
+  cursor: pointer;
+}
+header p:hover {
+  transform: scale(1.2);
 }
 
 .sequencer {
@@ -478,8 +529,8 @@ color: red;
     display: flex;flex-wrap: wrap;
   }
   .pad {
-    width: 1.1rem;
-    height: 1.1rem;
+    width: 2.25rem;
+    height: 2.25rem;
     margin: .5rem .25rem;
     cursor: pointer;
     border-radius: 50%;
